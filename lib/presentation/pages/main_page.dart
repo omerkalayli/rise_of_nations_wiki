@@ -1,10 +1,12 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:rise_of_nations_wiki/gen/assets.gen.dart';
 import 'package:rise_of_nations_wiki/global/constants.dart';
-import 'package:rise_of_nations_wiki/presentation/widgets/button.dart';
+import 'package:rise_of_nations_wiki/presentation/widgets/custom_button.dart';
 
+@RoutePage()
 class MainPage extends StatelessWidget {
   const MainPage({super.key});
 
@@ -34,7 +36,10 @@ class MainPage extends StatelessWidget {
       (index) {
         return Padding(
           padding: mainMenubuttonPadding,
-          child: Button(text: mainMenuButtonTitles[index].tr()),
+          child: CustomButton(
+            text: mainMenuButtonTitles[index].tr(),
+            onClick: () {},
+          ),
         );
       },
     )));

@@ -82,3 +82,9 @@ const List<String> mainMenuButtonTitles = [
   "game_concepts",
   "about"
 ];
+
+const Color headerBackgroundColor = Color(0xffF7D2A4);
+const Color headerForegroundColor = Color.fromARGB(255, 158, 42, 31);
+
+const Color dropdownOuterBorderColor = Color(0xffE2CE92);
+const Color dropdownInnerBorderColor = Color(0xff7E4325);

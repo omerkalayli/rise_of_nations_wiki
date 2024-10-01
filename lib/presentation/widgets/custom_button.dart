@@ -4,16 +4,18 @@ import 'package:rise_of_nations_wiki/global/constants.dart';
 
 // Custom button widget with noisy background.
 
-class Button extends StatefulWidget {
-  const Button({required this.text, this.height = 48, super.key});
+class CustomButton extends StatefulWidget {
+  const CustomButton(
+      {required this.text, required this.onClick, this.height = 48, super.key});
   final String text;
   final double height;
+  final Function onClick;
 
   @override
-  State<Button> createState() => _ButtonState();
+  State<CustomButton> createState() => _CustomButtonState();
 }
 
-class _ButtonState extends State<Button> {
+class _CustomButtonState extends State<CustomButton> {
   bool isClicked = false;
 
   @override
@@ -21,7 +23,7 @@ class _ButtonState extends State<Button> {
     return InkWell(
       overlayColor: const WidgetStatePropertyAll(Colors.transparent),
       onTapUp: (details) async {
-        Future.delayed(Durations.medium1, () {
+        await Future.delayed(Durations.medium1, () {
           setState(() {
             isClicked = false;
           });

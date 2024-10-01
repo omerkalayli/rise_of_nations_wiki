@@ -21,16 +21,21 @@ dependencies:
   blurbox: ^0.0.4
   gap: ^3.0.1
   easy_localization: ^3.0.7
+  auto_route: ^9.2.2
+  auto_size_text: ^3.0.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^3.0.0
+  auto_route_generator: ^9.0.0
 
 flutter:
   assets:
     - assets/translations/
     - assets/images/
+    - assets/images/nation_flags/
+
   uses-material-design: true
   fonts:
     - family: TrajanPro

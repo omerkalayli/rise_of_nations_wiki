@@ -6,5 +6,5 @@ ThemeData getTheme(BuildContext context) => ThemeData().copyWith(
       scaffoldBackgroundColor: backgroundColor,
       textTheme: GoogleFonts.ebGaramondTextTheme().copyWith(
           bodyMedium: GoogleFonts.ebGaramond(
-              color: Colors.white, fontWeight: FontWeight.w500, fontSize: 20)),
+              color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16)),
     );
