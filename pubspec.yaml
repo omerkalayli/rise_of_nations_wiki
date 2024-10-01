@@ -1,19 +1,48 @@
 name: rise_of_nations_wiki
 description: "A new Flutter project."
-publish_to: 'none'
+publish_to: "none"
 version: 0.1.0
 
 environment:
-  sdk: '>=3.4.4 <4.0.0'
+  sdk: ">=3.4.4 <4.0.0"
+
+scripts:
+  build: dart run build_runner build --delete-conflicting-outputs
 
 dependencies:
+  build_runner: ^2.4.11
+  derry: ^1.5.0
   flutter:
     sdk: flutter
+  google_fonts: ^6.2.1
+  fast_noise: ^2.0.0
+  flutter_svg: ^2.0.10+1
+  flutter_gen: ^5.7.0
+  blurbox: ^0.0.4
+  gap: ^3.0.1
+  easy_localization: ^3.0.7
+  auto_route: ^9.2.2
+  auto_size_text: ^3.0.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^3.0.0
+  auto_route_generator: ^9.0.0
 
 flutter:
+  assets:
+    - assets/translations/
+    - assets/images/
+    - assets/images/nation_flags/
+
   uses-material-design: true
+  fonts:
+    - family: TrajanPro
+      fonts:
+        - asset: assets/fonts/trajan-pro/TrajanPro-Bold.otf
+        - asset: assets/fonts/trajan-pro/TrajanPro-Regular.ttf
+
+flutter_gen:
+  integrations:
+    flutter_svg: true
