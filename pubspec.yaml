@@ -23,6 +23,7 @@ dependencies:
   easy_localization: ^3.0.7
   auto_route: ^9.2.2
   auto_size_text: ^3.0.0
+  assets_audio_player: ^3.1.1
 
 dev_dependencies:
   flutter_test:
@@ -35,6 +36,7 @@ flutter:
     - assets/translations/
     - assets/images/
     - assets/images/nation_flags/
+    - assets/sounds/
 
   uses-material-design: true
   fonts:

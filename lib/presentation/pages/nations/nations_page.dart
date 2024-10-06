@@ -1,9 +1,11 @@
+import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:rise_of_nations_wiki/global/constants.dart';
+import 'package:rise_of_nations_wiki/global/utils.dart';
 import 'package:rise_of_nations_wiki/presentation/controllers/nation_controller.dart';
 import 'package:rise_of_nations_wiki/presentation/entities/nation.dart';
 import 'package:rise_of_nations_wiki/presentation/widgets/custom_dropdown_menu.dart';
@@ -90,6 +92,7 @@ class _NationsPageState extends State<NationsPage> {
                           overlayColor:
                               const WidgetStatePropertyAll(Colors.transparent),
                           onTap: () async {
+                            await playNavigateForwardSound();
                             await context.router.push(NationInfoRoute(
                                 nation: filteredNations[index * 2]));
                           },
@@ -125,6 +128,7 @@ class _NationsPageState extends State<NationsPage> {
                           overlayColor:
                               const WidgetStatePropertyAll(Colors.transparent),
                           onTap: () async {
+                            await playNavigateForwardSound();
                             await context.router.push(NationInfoRoute(
                                 nation: filteredNations[index * 2 + 1]));
                           },

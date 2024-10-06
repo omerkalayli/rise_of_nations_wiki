@@ -1,6 +1,8 @@
+import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 import 'package:rise_of_nations_wiki/gen/assets.gen.dart';
 import 'package:rise_of_nations_wiki/global/constants.dart';
+import 'package:rise_of_nations_wiki/global/utils.dart';
 
 // Custom button widget with noisy background.
 
@@ -19,6 +21,11 @@ class _CustomButtonState extends State<CustomButton> {
   bool isClicked = false;
 
   @override
+  void dispose() {
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return InkWell(
       overlayColor: const WidgetStatePropertyAll(Colors.transparent),
@@ -29,7 +36,9 @@ class _CustomButtonState extends State<CustomButton> {
           });
         });
       },
-      onTapDown: (details) {
+      onTapDown: (details) async {
+        await playClickSound();
+
         setState(() {
           isClicked = true;
         });
